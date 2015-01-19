@@ -10,8 +10,9 @@
     <script src="javascripts/scale.fix.js"></script>
     <script>
       window.onload = function adjust_iframe_height(){
-        console.log('post height');
+        
         var actual_height = document.body.scrollHeight;
+        console.log('post height', actual_height);
         parent.postMessage(actual_height,"*"); 
         //* allows this to post to any parent iframe regardless of domain
       }
